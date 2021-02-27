@@ -1,0 +1,32 @@
+html {
+	font-size: $primary-font-size;
+}
+
+body {
+	font-size: $primary-font-size;
+	font-family: $font-stack;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: $light;
+	font-style: normal;
+}
+
+p {
+	font-weight: $regular;
+	font-style: normal;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+.main {
+	background: $white01;
+}

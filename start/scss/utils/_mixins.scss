@@ -1,0 +1,154 @@
+@mixin inline_block($valign: top) {
+	display: inline-block;
+	vertical-align: $valign;
+}
+
+@mixin site_width($width: 940px) {
+	width: 100%;
+	max-width: $width;
+	margin: 0 auto;
+}
+
+@mixin clear_fix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+		width: 100%;
+	}
+}
+
+@mixin horizontal_centering {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin vertical_centering {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin absolute_centering {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin image_centring {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+}
+
+@mixin percentage($parent, $current) {
+	width: $current / $parent * 100%;
+}
+
+@mixin margin($num, $side: all) {
+	@if $side==all {
+		margin: $num * 1px;
+	}
+
+	@else {
+		margin-#{$side}: $num * 1px;
+	}
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+@mixin triangle($color:$black, $side: top, $size: 10px) {
+	width: 0;
+	height: 0;
+
+	@if $side==bottom {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	}
+
+	@else if $side==top {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	}
+
+	@else if $side==right {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+	}
+
+	@else if $side==left {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+	}
+}
+
+@mixin font_stack($size: false, $color: false, $weight: false, $lh: false) {
+	font-family: $font-stack;
+
+	@if $size {
+		font-size: $size;
+	}
+
+	@if $color {
+		color: $color;
+	}
+
+	@if $weight {
+		font-weight: $weight;
+	}
+
+	@if $lh {
+		line-height: $lh;
+	}
+}
+
+@mixin link($link,$hover,$active,$visited) {
+	color: $link;
+	&:hover{
+		color: $hover;
+	}	
+	&:active{
+		color: $active;
+	}
+	&:visited{
+		color: $visited;
+	}
+	@content;
+}
+@mixin button ($height,$width,$b_radius,$bg_color){
+	height: $height;
+	width: $width;
+	border-radius: $b_radius;
+	background-color: $bg_color;
+	@content;
+}
+@mixin block($display,$direction,$content){
+	display: $display;
+    flex-direction: $direction;
+    justify-content: $content;
+	@content;
+}
+@mixin grid($cols,$margin) {
+	float: left;
+	margin-right: $margin;
+
+	height: auto;
+	width: ((100% - (($cols - 1)*$margin)) /$cols );
+
+	&:nth-child(#{$cols}n){
+		margin-right: 0px;
+	}
+}

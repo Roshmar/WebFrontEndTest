@@ -1,0 +1,51 @@
+.header{
+    position:absolute;
+    margin-top: 29px;
+    padding-left: 165px;
+    padding-right: 165px;
+    
+    width: 100%;
+   
+    height:89px;
+}
+
+.menu{
+    height: 100%;
+    background-color: $darkGray01;
+    ul{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        
+    }
+    li{
+        vertical-align: middle;
+        display: inline-flex;
+        text-align: center;
+        height: auto;
+        width: auto;
+        
+    }
+    a{  
+        @include font_stack($primary-font-size,$weight: $bold,);
+        @include link($whiteText,$whiteText,$whiteText,$whiteText){
+            
+            &:hover{
+                background-color: $coral01;
+            }
+            &:active{
+                background-color: $coral01;
+            }
+            &:visited{
+                background-color: $coral01;
+            } 
+        }
+        padding-top: 45px;
+        padding-bottom: 34px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding: 45px 24px 34px 24px;
+    }
+}
