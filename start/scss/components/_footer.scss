@@ -3,4 +3,28 @@
     height: 111px;
     width: 100%;
     bottom: 0;
+    @include block(inline-flex,row,space-between);
+    align-items: center;
+
+    div{
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        p{
+            @include font_stack(14px,#b0b0b0,$light,26px);
+        }
+        ul{
+          float: right;
+           @include block(inline-flex,row,flex-end);
+           margin-right: 10%;
+        }
+        li{
+            margin-right: 10%;
+        }
+        img{
+           
+            width: 32px;
+            height: 32px;
+        }
+    }
 }

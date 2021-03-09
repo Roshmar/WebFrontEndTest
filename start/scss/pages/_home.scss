@@ -94,7 +94,7 @@
         }
     }
 }
-.third_div{
+.feature_products{
     width: 100%;
     @include block(block,column,center);
     
@@ -131,6 +131,284 @@
         height: 2px;
         color: $coral01;
         background-color: $coral01;
-        width: 150px;
+        width: 130px;
     }
+    .feature_products_nav_bar{
+        margin-top: 85px;
+        width: 100%;
+        @include block(inline-flex,row,space-around);
+       
+        ul{
+            width: 100%;
+            @include block(inline-flex,row,center);
+            
+        }
+        a{
+            @include font_stack(18px,$lightGray,$bold,30px);
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        li:first-child{
+            a{
+                color: $coral01;
+            }
+        }
+    }
+    .feature_products_nav_image{
+        margin-top: 65px;
+        width: 100%;
+        @include block(inline-flex,row,space-around);
+        li{
+            @include grid(4,1%);
+            margin-bottom: 1%;
+            display: block;
+            width: 280px;
+            height: 290px;
+            background-color: #f3f0dd;
+        }
+    }
+    div:last-child{
+        @include block(inline-flex,column,none);
+        width: 100%;
+        margin-top: 130px;
+        >h2{
+            display: flex;
+            @include font_stack(42px,$darkGray02,$bold,55px);
+            float: left;
+        }
+        >p{
+            display: flex;
+            margin-top: 40px;
+            @include font_stack(17px,$lightGray,$light,28px);
+            text-align: left;
+            float: left;
+            width: 450px;
+        }
+        >hr{
+            margin-left: 0;
+            float: left;
+        }
+        >div{
+            margin-top: 70px;
+            @include block(inline-flex,row,center);
+            div:first-child{
+                width: 320px;
+                height: auto;
+                background-color:#f5f0dd;
+            }
+            div:last-child{
+                @include block(inline-flex,column,flex-start);
+                margin-left: 75px;
+                h2{
+                    top: 0;
+                    margin: 0;
+                    display: flex;
+                    @include font_stack(24px,$darkGray02,$light,45px);
+                    float: left;
+                }
+                p{
+                    display: flex;
+                    margin-top: 40px;
+                    @include font_stack(16px,$lightGray,$light,28px);
+                    text-align: left;
+                    float: left;
+                    width: 630px;
+                }
+                >div{
+                    margin: 0;
+                    margin-top: 40px;
+                    width: 100%;
+                    @include block(inline-flex,row,flex-start);
+                   
+                    ul{
+                        width: 100%;
+                        @include block(inline-flex,row,flex-start);
+                    }
+                    a{
+                        @include font_stack(16px,$lightGray,$light,30px);
+                        font-style: italic;
+                        margin-right: 40px;
+                        
+                       
+                    }
+                }
+                >div:last-child{
+                    margin-top: 60px;
+                    width: 100%;
+                    @include block(inline-flex,row,space-around);
+                    li{
+                        @include grid(4,1%);
+                        
+                        display: block;
+                       
+                        background-color: #f3f0dd;
+                        div{
+                            margin-left:0;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 40px;
+                            background-color: black;
+                            opacity: 0.55;
+                            p{  
+                                align-items: center;
+                                height: 100%;
+                                width: 100%;
+                                margin:0;
+
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.search{
+    width: 100%;
+    @include block(inline-flex,column,center);
+    
+    background-color: #f3efdd;
+
+    h1{
+        padding-top: 140px;
+        display: flex;
+        justify-content: center;
+        @include font_stack(42px,#fdfcf8,$bold,55px);
+       
+    }
+     p{
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        @include font_stack(18px,#fdfcf8,$light,28px);
+    }
+    div{
+        width: 100%;
+        @include block(inline-flex,row,center);
+        margin-top: 60px;
+        padding-bottom: 140px;
+
+        input[type=text]{
+            display: inline-flex;
+            height: 80px;
+            width: 525px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 8px;
+            &::placeholder{
+                align-items: center;
+                padding-left: 40px;
+                
+                @include font_stack(14px,#818181,$light,28px);
+            }
+        }
+        input[type=button]{
+            display: inline-flex;
+            justify-content: center;
+            @include button(80px,210px,4px,$coral01);
+            @include font_stack(16px,$whiteText,$bold,28px);
+            margin-right: 10px;
+            margin-left: 10px;
+
+            
+        }
+    }
+    
+}
+.registration{
+    width: 100%;
+    @include block(inline-flex,column,center);
+    
+    padding: 0 165px 110px 165px;
+    h1{
+        margin-top: 140px;
+        @include font_stack(42px,$darkGray02,$bold,55px);
+        float: left;
+        margin-bottom: 50px;
+    }
+    p{
+        @include font_stack(18px,$lightGray,$light,28px);
+        width: 740px;
+        
+    }
+    hr{
+        margin-top: 50px;
+        align-items: flex-start;
+        float: left;
+        margin-left: 0;
+        border: none;
+        height: 2px;
+        color: $coral01;
+        background-color: $coral01;
+        width: 130px;
+    }
+    div{
+        width: 100%;
+        @include block(inline-flex,row,none);
+        div:first-child{
+            width: 740px;
+            @include block(inline-flex,column,none);
+            div{
+                @include block(inline-flex,row,space-between);
+            }
+            
+        }
+        div:last-child{
+            right: 0;
+            width: auto;
+            height: auto;
+            @include block(inline-flex,column,none);
+            position: absolute;
+            background-color: #313131;
+            p{
+                width: auto;
+                margin-top: 30px;
+                margin-left: 80px;
+                margin-right: 180px;
+                @include font_stack(16px,#dfdfdf,$light,28px);
+                &:first-child{
+                    margin-top: 150px;
+                    font-weight: $bold;
+                }
+                &:last-child{
+                    margin-bottom: 180px;
+                }
+            }
+            
+        }
+    }
+ 
+    input[type=text]{
+        margin-top: 75px;
+       
+        background-color: #e5e5e5;
+        width: 340px;
+        height: 70px;
+        border-radius: 8px;
+        &::placeholder{
+            padding-left: 55px;
+            @include font_stack(16px)
+        }
+    }
+    textarea{
+        border-radius: 8px;
+        margin-top: 50px;
+        background-color: #e5e5e5;
+        border: none;
+        width: 100%;
+        height: 250px;
+        &::placeholder{
+            padding: 35px 0 0 55px;
+            @include font_stack(16px)
+        }
+    }
+    input[type=button]{
+        @include button(70px,100%,4px,$coral01);
+        margin-top: 48px;
+        @include font_stack(18px,$whiteText,$bold,28px);
+    }
+    
 }
