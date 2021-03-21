@@ -3,7 +3,7 @@
 	vertical-align: $valign;
 }
 
-@mixin site_width($width: 940px) {
+@mixin site_width($width) {
 	width: 100%;
 	max-width: $width;
 	margin: 0 auto;

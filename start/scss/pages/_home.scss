@@ -1,414 +1,369 @@
-.first_div{
-    height: 680px;
-    width: 100%;
-    background-color: $background01;
-    padding: 220px 165px 110px 165px;
-    @include block(inline-flex,row,center);
-    div:first-child{
-        width: 50%;
-        height: 100%;
-        h1{
-            @include font_stack(60px,$black01,800,72px);
-            float: left;
-            margin-bottom: 50px;
-        }
-        p{
-            @include font_stack(18px,$lightGray,$light,28px);
-            
-        }
-        input{
-            margin-top: 48px;
-            width: 220px;
-            height: 55px;
-            background-color: $coral01;
-            border-radius: 4px;
-            @include font_stack(18px,$whiteText,$bold,28px);
-        }
-    }
-    div:last-child{
-        width: 50%;
-        height: 100%;
-    
-        video{
-            width: 550px;
-            height: 350px;
-            float: right;
-            background-color: $emptyFon;
-            box-shadow: 0 0 50px rgba(0,0,0,0.25), 0 0 10px rgba(0,0,0,0.22);
-        }
-    }
+main {
+    position: relative;
 }
-.second_div{
-    
-    width: 100%;
-    @include block(inline-flex,row,center);
-    padding: 96px 165px 110px 165px;
-    div:first-child{
-        padding-right: 5%;
-        width: 50%;
-        height: 100%;
-        h1{
-            @include font_stack(42px,$darkGray02,$bold,55px);
-            float: left;
-            margin-bottom: 50px;
-        }
-        p{
-            
-            @include font_stack(18px,$black01,$light,28px);
-        }
-        input{
-            @include button(55px,220px,4px,$white01){
-                border: 2px solid $coral01;
-            };
-            margin-top: 48px;
-            @include font_stack(18px,$coral01,$bold,28px);
-        }
-    }
-    div:last-child{
-        width: 50%;
-        height: auto;
-        
-        ul{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            //flex-direction: row;
-        }
-        li{
-            
-            //display: flex;
-            @include grid(2,10%);
-            padding-bottom: 5%;
-            img{
-                height: 32px;
-                width: 32px;
-                margin-bottom: 30px
-             }
-            h5{
-                @include font_stack(20px,#737373,600,32px);
-            }
-            p{
-                @include font_stack(17px,#737373,300,28px);
-            }    
-        }
-    }
+.title {
+    @include font_stack(36px, #333333, $bold, 55px);
 }
-.feature_products{
+.subtitle {
+    @include font_stack(17px, #737373, $light, 28px);
+    height: auto;
+}
+.video-wrapper {
     width: 100%;
-    @include block(block,column,center);
-    
-    
-    justify-content: center;
-    
-    padding: 0 165px 110px 165px;
-    
-    .gray_line{
-        margin-bottom: 100px;
-        border: none;
-        height: 2px;
-        color: #ebebeb;
-        background-color: #ebebeb;
-        width: 100%;
-    }
-    h1{
-        
+    height: 700px;
+    background-color: #f5f2f2;
+    .video-block {
+        @include site_width(1250px);
         display: flex;
-        justify-content: center;
-        @include font_stack(42px,$darkGray02,$light,55px);
-        font-family: 'Times New Roman';
-    }
-    p{
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        @include font_stack(16px,$darkGray02,$light,28px);
-        font-family: 'Times New Roman';
-    }
-    .red_line{
-        margin-top: 30px;
-        border: none;
-        height: 2px;
-        color: $coral01;
-        background-color: $coral01;
-        width: 130px;
-    }
-    .feature_products_nav_bar{
-        margin-top: 85px;
-        width: 100%;
-        @include block(inline-flex,row,space-around);
-       
-        ul{
-            width: 100%;
-            @include block(inline-flex,row,center);
-            
-        }
-        a{
-            @include font_stack(18px,$lightGray,$bold,30px);
-            margin-left: 25px;
-            margin-right: 25px;
-        }
-        li:first-child{
-            a{
-                color: $coral01;
-            }
-        }
-    }
-    .feature_products_nav_image{
-        margin-top: 65px;
-        width: 100%;
-        @include block(inline-flex,row,space-around);
-        li{
-            @include grid(4,1%);
-            margin-bottom: 1%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .video-inline-block {
             display: block;
-            width: 280px;
-            height: 290px;
-            background-color: #f3f0dd;
-        }
-    }
-    div:last-child{
-        @include block(inline-flex,column,none);
-        width: 100%;
-        margin-top: 130px;
-        >h2{
-            display: flex;
-            @include font_stack(42px,$darkGray02,$bold,55px);
-            float: left;
-        }
-        >p{
-            display: flex;
-            margin-top: 40px;
-            @include font_stack(17px,$lightGray,$light,28px);
-            text-align: left;
-            float: left;
-            width: 450px;
-        }
-        >hr{
-            margin-left: 0;
-            float: left;
-        }
-        >div{
-            margin-top: 70px;
-            @include block(inline-flex,row,center);
-            div:first-child{
-                width: 320px;
-                height: auto;
-                background-color:#f5f0dd;
+            padding-top: 200px;
+            width: 50%;
+            .main-header {
+                @include font_stack(52px, #000, 800, 72px);
+                max-width: 600px;
             }
-            div:last-child{
-                @include block(inline-flex,column,flex-start);
-                margin-left: 75px;
-                h2{
-                    top: 0;
-                    margin: 0;
-                    display: flex;
-                    @include font_stack(24px,$darkGray02,$light,45px);
-                    float: left;
+            .video-description {
+                @include font_stack(17px, $lightGray, $light, 28px);
+                max-width: 500px;
+                margin-top: 36px;
+            }
+            .video-button {
+                @include button(50px, 220px, 6px, $coral01) {
+                    @include font_stack(16px, $whiteText, 700, 32px);
                 }
-                p{
-                    display: flex;
-                    margin-top: 40px;
-                    @include font_stack(16px,$lightGray,$light,28px);
-                    text-align: left;
-                    float: left;
-                    width: 630px;
-                }
-                >div{
-                    margin: 0;
-                    margin-top: 40px;
-                    width: 100%;
-                    @include block(inline-flex,row,flex-start);
-                   
-                    ul{
-                        width: 100%;
-                        @include block(inline-flex,row,flex-start);
-                    }
-                    a{
-                        @include font_stack(16px,$lightGray,$light,30px);
-                        font-style: italic;
-                        margin-right: 40px;
-                        
-                       
-                    }
-                }
-                >div:last-child{
-                    margin-top: 60px;
-                    width: 100%;
-                    @include block(inline-flex,row,space-around);
-                    li{
-                        @include grid(4,1%);
-                        
-                        display: block;
-                       
-                        background-color: #f3f0dd;
-                        div{
-                            margin-left:0;
-                            left: 0;
-                            bottom: 0;
-                            width: 100%;
-                            height: 40px;
-                            background-color: black;
-                            opacity: 0.55;
-                            p{  
-                                align-items: center;
-                                height: 100%;
-                                width: 100%;
-                                margin:0;
-
-                            }
-                        }
-
-                    }
-                }
+                margin-top: 60px;
+            }
+            .video {
+                width: 550px;
+                height: 350px;
+                float: right;
+                background-color: $emptyFon;
+                box-shadow: 0 0 50px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.22);
             }
         }
     }
-    
 }
-.search{
-    width: 100%;
-    @include block(inline-flex,column,center);
-    
-    background-color: #f3efdd;
-
-    h1{
-        padding-top: 140px;
-        display: flex;
-        justify-content: center;
-        @include font_stack(42px,#fdfcf8,$bold,55px);
-       
-    }
-     p{
-        margin-top: 35px;
-        display: flex;
-        justify-content: center;
-        @include font_stack(18px,#fdfcf8,$light,28px);
-    }
-    div{
+.info-wrapper {
+    @include site_width(1250px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    &::after {
         width: 100%;
-        @include block(inline-flex,row,center);
-        margin-top: 60px;
-        padding-bottom: 140px;
+        position: absolute;
+        content: "";
+        height: 2px;
+        background-color: #ebebeb;
+        left: 0;
+        right: 0;
+        bottom: -100px;
+    }
 
-        input[type=text]{
+    .info-block {
+        width: 50%;
+        margin-top: 100px;
+        .info-block-title {
+            max-width: 500px;
+            left: 0;
+        }
+        .info-block-subtitle {
+            color: #000;
+            max-width: 500px;
+            margin-top: 50px;
+            left: 0;
+        }
+        .info-block-button {
+            @include button(60px, 220px, 6px, #fff) {
+                @include font_stack(16px, $coral01, 700, 32px);
+                border: 2px solid $coral01;
+            }
+            margin-top: 60px;
+        }
+        .info-block-ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .info-block-li {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                .info-block-img {
+                    height: 32px;
+                    width: 32px;
+                }
+                .info-block-img-title {
+                    @include font_stack(20px, #737373, 600, 32px);
+                    margin-top: 30px;
+                }
+                .info-block-img-subtitle {
+                    @include font_stack(17px, #737373, 300, 28px);
+                    max-width: 280px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+.main-wrapper {
+    @include site_width(1250px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 200px;
+
+    p {
+        display: block;
+        margin: 30px auto;
+        max-width: 500px;
+        &::after {
+            @include site_width(150px);
+            position: absolute;
+            content: "";
+            height: 2px;
+            background-color: $coral01;
+            left: 0;
+            right: 0;
+            margin-top: 50px;
+        }
+    }
+
+    .main-grid-title-box {
+        @include site_width(900px);
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .main-grid-title-block {
+            margin: 0 20px;
+            .main-grid-title-link {
+                @include font_stack(18px, $lightGray, $bold, 30px);
+            }
+        }
+    }
+    .main-grid-box {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .main-grid-block {
+            margin-top: 20px;
+            width: 300px;
+            height: 300px;
+            background-color: #f4f0dd;
+        }
+    }
+}
+.portfolio-wrapper {
+    @include site_width(1250px);
+    .portfolio-title {
+        margin-top: 140px;
+    }
+    .portfolio-subtitle {
+        position: relative;
+
+        max-width: 500px;
+        margin-top: 35px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 130px;
+            height: 2px;
+            background-color: $coral01;
+
+            left: 0;
+            bottom: -30px;
+        }
+    }
+    .portfolio-box {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .portfolio-box-photo {
+            width: 320px;
+            height: 450px;
+            background-color: #f5f0dd;
+            margin-right: 70px;
+        }
+        .portfolio-block {
+            width: 100%;
+            .portfolio-block-title {
+                @include font_stack(32px, #333333, $bold, 55px);
+            }
+            .portfolio-block-subtitle {
+                max-width: 620px;
+                margin-top: 25px;
+            }
+            .portfolio-grid {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                margin-top: 20px;
+                .portfolio-grid-block {
+                    margin-right: 30px;
+                    .portfolio-grid-link {
+                        @include font_stack(17px, #737373, 700, 28px);
+                        font-style: italic;
+                    }
+                }
+            }
+            .portfolio-grid-box {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                flex-wrap: wrap;
+                margin-top: 50px;
+                .portfolio-grid-box-content {
+                    position: relative;
+                    display: block;
+                    width: 200px;
+                    height: 220px;
+                    background-color: #f5f0dd;
+                    margin-right: 20px;
+
+                    .portfolio-grid-box-content-name {
+                        @include font_stack(18px, $whiteText, 700, 32px);
+                        position: absolute;
+                        bottom: 0;
+                        display: block;
+                        text-align: center;
+                        width: 100%;
+                        height: 40px;
+                        background-color: black;
+                        opacity: 0.55;
+                    }
+                }
+            }
+        }
+    }
+}
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f3efdd;
+    margin-top: 120px;
+    .search-title {
+        @include font_stack(36px, $white01, $bold, 55px);
+        margin: 150px auto 0;
+    }
+    .search-subtitle {
+        @include font_stack(18px, #fdfcf8, $light, 28px);
+        margin: 35px auto 0;
+    }
+    .search-block {
+        @include site_width(800px);
+        margin: 35px auto 140px;
+        .search-screen {
             display: inline-flex;
             height: 80px;
             width: 525px;
-            margin-right: 10px;
-            margin-left: 10px;
+
             border-radius: 8px;
-            &::placeholder{
+
+            &::placeholder {
+                @include font_stack(14px, #818181, $light, 28px);
                 align-items: center;
                 padding-left: 40px;
-                
-                @include font_stack(14px,#818181,$light,28px);
             }
         }
-        input[type=button]{
-            display: inline-flex;
-            justify-content: center;
-            @include button(80px,210px,4px,$coral01);
-            @include font_stack(16px,$whiteText,$bold,28px);
-            margin-right: 10px;
-            margin-left: 10px;
-
-            
+        .search-button {
+            @include button(80px, 210px, 4px, $coral01);
+            @include font_stack(16px, $whiteText, $bold, 28px);
+            margin: 0 10px;
         }
     }
-    
 }
-.registration{
-    width: 100%;
-    @include block(inline-flex,column,center);
-    
-    padding: 0 165px 110px 165px;
-    h1{
-        margin-top: 140px;
-        @include font_stack(42px,$darkGray02,$bold,55px);
-        float: left;
-        margin-bottom: 50px;
+.registration-wrapper {
+    @include site_width(1250px);
+
+    margin-bottom: 110px;
+    .registration-title {
+        margin-top: 110px;
     }
-    p{
-        @include font_stack(18px,$lightGray,$light,28px);
-        width: 740px;
-        
-    }
-    hr{
-        margin-top: 50px;
-        align-items: flex-start;
-        float: left;
-        margin-left: 0;
-        border: none;
-        height: 2px;
-        color: $coral01;
-        background-color: $coral01;
-        width: 130px;
-    }
-    div{
-        width: 100%;
-        @include block(inline-flex,row,none);
-        div:first-child{
-            width: 740px;
-            @include block(inline-flex,column,none);
-            div{
-                @include block(inline-flex,row,space-between);
-            }
-            
-        }
-        div:last-child{
-            right: 0;
-            width: auto;
-            height: auto;
-            @include block(inline-flex,column,none);
+    .registration-subtitle {
+        position: relative;
+        margin-top: 40px;
+        max-width: 700px;
+        &::after {
+            content: "";
             position: absolute;
-            background-color: #313131;
-            p{
-                width: auto;
-                margin-top: 30px;
-                margin-left: 80px;
-                margin-right: 180px;
-                @include font_stack(16px,#dfdfdf,$light,28px);
-                &:first-child{
-                    margin-top: 150px;
-                    font-weight: $bold;
-                }
-                &:last-child{
-                    margin-bottom: 180px;
+            left: 0;
+            height: 2px;
+            width: 130px;
+            background-color: $coral01;
+            margin-top: 90px;
+        }
+    }
+    .registration-box {
+        margin-top: 130px;
+        display: flex;
+        flex-direction: row;
+        .registration-block {
+            max-width: 730px;
+            max-height: 485px;
+            .registration-name {
+                background-color: #e5e5e5;
+                width: 340px;
+                height: 70px;
+                border-radius: 8px;
+                &::placeholder {
+                    @include font_stack(16px);
+                    padding-left: 55px;
                 }
             }
-            
+            .registration-mail {
+                float: right;
+                background-color: #e5e5e5;
+                width: 340px;
+                height: 70px;
+                border-radius: 8px;
+                &::placeholder {
+                    @include font_stack(16px);
+                    padding-left: 55px;
+                }
+            }
+            .registration-description {
+                border-radius: 8px;
+                margin-top: 50px;
+                background-color: #e5e5e5;
+                border: none;
+                width: 100%;
+                max-width: 730px;
+                height: 250px;
+                &::placeholder {
+                    @include font_stack(16px);
+                    padding: 35px 0 0 55px;
+                }
+            }
+            .registration-button {
+                @include button(70px, 100%, 4px, $coral01);
+                @include font_stack(18px, $whiteText, $bold, 28px);
+                margin-top: 48px;
+            }
+        }
+        .registration-block + .registration-block {
+            position: absolute;
+            right: 0;
+            width: 575px;
+            height: 485px;
+            background-color: #313131;
+            .registration-block-title {
+                @include font_stack(16px, #dfdfdf, 700, 28px);
+                margin: 140px 0 0 40px;
+            }
+            .registration-block-info {
+                @include font_stack(16px, #dfdfdf, $light, 28px);
+                margin: 30px 0 0 40px;
+                max-width: 300px;
+            }
         }
     }
- 
-    input[type=text]{
-        margin-top: 75px;
-       
-        background-color: #e5e5e5;
-        width: 340px;
-        height: 70px;
-        border-radius: 8px;
-        &::placeholder{
-            padding-left: 55px;
-            @include font_stack(16px)
-        }
-    }
-    textarea{
-        border-radius: 8px;
-        margin-top: 50px;
-        background-color: #e5e5e5;
-        border: none;
-        width: 100%;
-        height: 250px;
-        &::placeholder{
-            padding: 35px 0 0 55px;
-            @include font_stack(16px)
-        }
-    }
-    input[type=button]{
-        @include button(70px,100%,4px,$coral01);
-        margin-top: 48px;
-        @include font_stack(18px,$whiteText,$bold,28px);
-    }
-    
 }
