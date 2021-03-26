@@ -6,6 +6,12 @@ src: url('../fonts/icons/icons.eot?#iefix') format('eot'),
 url('../fonts/icons/icons.woff') format('woff'),
 url('../fonts/icons/icons.ttf') format('truetype'),
 url('../fonts/icons/icons.svg#icons') format('svg');
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+
 }
 
 @mixin icon-styles {
@@ -29,7 +35,7 @@ url('../fonts/icons/icons.svg#icons') format('svg');
 	$char: "";
 
 @if $filename == cogwheel {
-	char: "\E001";
+	$char: "\E001";
 }
 
 @return $char;

@@ -16,6 +16,7 @@ gulp.task('scss', () => {
 
 gulp.task('sass-watch', () => {
 	gulp.watch('scss/**/*.scss', gulp.series('scss'))
+	//gulp.watch('scss/**/*.scss', gulp.parallel('scss'));
 });
 
 gulp.task('icon-font', async () => {

@@ -113,4 +113,12 @@
 	@if $lh {
 		line-height: $lh;
 	}
+	@content;
+}
+@mixin button ($height,$width,$b_radius,$bg_color){
+	height: $height;
+	width: $width;
+	border-radius: $b_radius;
+	background-color: $bg_color;
+	@content;
 }
